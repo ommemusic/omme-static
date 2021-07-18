@@ -1,0 +1,305 @@
+.home {
+  &-header {
+    display: none;
+  }
+
+  .hero {
+    align-content: center;
+    background: linear-gradient(rgba($color-dark-1, 0.7), $color-dark-1),
+      url(../images/bg-hero-placeholder.jpg) no-repeat center;
+    background-size: cover;
+    color: $color-white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    padding: 10vh 5%;
+    text-align: center;
+    width: 90%;
+
+    &__logo {
+      margin: 0 auto 6rem;
+      width: 20rem;
+    }
+
+    &__heading {
+      font-family: $font-special;
+      font-size: 4.3rem;
+      font-weight: normal;
+      line-height: 1.1;
+      margin-bottom: 3rem;
+
+      span {
+        font-weight: bold;
+      }
+
+      &--primary {
+        color: $color-primary;
+      }
+
+      &--secondary {
+        color: $color-secondary;
+      }
+    }
+
+    &__subheading {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 6rem;
+      margin-inline: auto;
+      max-width: 35ch;
+    }
+
+    &__cta {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__legend {
+      display: block;
+      font-size: 2rem;
+    }
+
+    &__buttons {
+      display: inline-flex;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    &__btn {
+      background-color: $color-primary;
+      border-radius: 3px;
+      display: inline-flex;
+      flex: 1;
+      font-family: $font-special;
+      font-size: 2.4rem;
+      justify-content: center;
+      line-height: 1;
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+@include mq($bp-laptop) {
+  .home {
+    position: relative;
+
+    &-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      position: fixed;
+      width: 90%;
+    }
+
+    &-nav {
+      ul {
+        align-items: center;
+        display: flex;
+        gap: 10rem;
+      }
+    }
+
+    .hero {
+      text-align: left;
+
+      &__logo {
+        display: none;
+      }
+
+      &__heading {
+        font-size: 8.5rem;
+        margin-top: auto;
+      }
+
+      &__subheading {
+        font-size: 2.4rem;
+        margin-inline: 0;
+      }
+
+      &__cta {
+        align-items: center;
+        flex-direction: row;
+        margin-top: auto;
+      }
+
+      &__legend {
+        flex: 1;
+        font-family: $font-special;
+        font-size: 3rem;
+        font-weight: 600;
+      }
+
+      &__buttons {
+        flex: 2;
+        gap: 1.6rem;
+      }
+
+      &__btn {
+        box-shadow: 0 3px 6px rgba($color-black, 0.1);
+        align-items: center;
+        background-size: cover;
+        font-family: $font-main;
+        font-size: 3rem;
+        height: 20rem;
+
+        &:hover span {
+          background-color: $color-white;
+          color: $color-dark-2;
+        }
+
+        span {
+          border: 3px solid $color-white;
+          border-radius: 5px;
+          padding: 1rem 2.5rem;
+          transition: 0.3s;
+        }
+
+        &--lombardia {
+          background: linear-gradient(rgba($color-dark-2, 0.7), $color-dark-2),
+            url(../images/bg-lombardia.jpg) no-repeat center;
+        }
+
+        &--veneto {
+          background: linear-gradient(rgba($color-dark-2, 0.7), $color-dark-2),
+            url(../images/bg-veneto.jpg) no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.home-instagram {
+  display: none;
+
+  @include mq($bp-laptop) {
+    display: block;
+    padding-block: 10rem;
+
+    h2 {
+      font-family: $font-special;
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+      text-align: center;
+
+      span {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.home-sidebar {
+  display: none;
+
+  @include mq($bp-laptop) {
+    background-color: $color-dark-2;
+    display: block;
+
+    .widgets {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.home-about {
+  display: none;
+
+  @include mq($bp-laptop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .about {
+      align-items: center;
+      background-size: 100%;
+      color: $color-white;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      height: 36rem;
+      justify-content: center;
+      padding-inline: 10%;
+      transition: 0.3s;
+
+      @include mq(1600px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &:hover {
+        background-position-y: 25%;
+      }
+
+      &__number {
+        color: $color-secondary;
+        font-size: 8rem;
+        font-weight: 900;
+      }
+
+      &__text {
+      }
+
+      &__title {
+        font-size: 3.6rem;
+        font-family: $font-special;
+        line-height: 1;
+      }
+
+      &__paragraph {
+        font-size: 2rem;
+      }
+
+      &--weddings {
+        background: linear-gradient(rgba($color-dark-1, 0.7), $color-dark-1),
+          url(../images/bg-intrattenitore.jpg) no-repeat center;
+      }
+
+      &--places {
+        background: linear-gradient(rgba($color-dark-1, 0.7), $color-dark-1),
+          url(../images/bg-sede.jpg) no-repeat center;
+      }
+
+      &--artists {
+        background: linear-gradient(rgba($color-dark-1, 0.7), $color-dark-1),
+          url(../images/bg-team.jpg) no-repeat center;
+      }
+    }
+  }
+}
+
+.home-matrimonio {
+  display: none;
+  @include mq($bp-laptop) {
+    display: block;
+    padding-block: 10rem;
+
+    h2 {
+      font-family: $font-special;
+      font-size: 3.6rem;
+      margin-bottom: 4rem;
+      text-align: center;
+
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    .matrimonio-badges {
+      display: flex;
+      gap: 1.6rem;
+      justify-content: center;
+      margin-top: 3rem;
+
+      img {
+        width: 13rem;
+      }
+    }
+  }
+}
+
+.home-sidebar {
+  padding-block: 6rem;
+}

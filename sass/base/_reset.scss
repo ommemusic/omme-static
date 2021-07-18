@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-dark-1;
+  color: rgba($color-white, 0.75);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  border-radius: 0.5rem;
+  display: flex;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 4.3rem;
+
+  @include mq($bp-laptop) {
+    font-size: 5.5rem;
+  }
+
+  @include mq($bp-desktop) {
+    font-size: 8.5rem;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+strong {
+  font-weight: bold;
+}

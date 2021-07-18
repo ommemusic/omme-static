@@ -1,0 +1,13 @@
+@mixin mq($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+
+%box-shadow {
+  box-shadow: 0 3px 6px rgba($color-black, 0.1);
+}
+
+@mixin gradient($color) {
+  background: linear-gradient(transparent, rgba($color, 0.5));
+}

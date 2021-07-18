@@ -1,0 +1,140 @@
+.topbar {
+  background: linear-gradient($color-dark-1, transparent);
+  padding-block: 1.5rem;
+  position: fixed;
+  right: 0;
+  width: 100%;
+
+  @include mq($bp-laptop) {
+    padding-block: 2.5rem;
+    width: calc(100vw - 30rem);
+
+    &__left {
+      flex: 0.5;
+    }
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__search {
+    display: none;
+
+    @include mq($bp-laptop) {
+      display: block;
+    }
+  }
+
+  &__back,
+  &__toggle {
+    font-size: 2.4rem;
+    @include mq($bp-laptop) {
+      display: none;
+    }
+  }
+
+  &__search {
+    @include mq($bp-laptop) {
+      align-items: center;
+      background-color: rgba($color-white, 0.1);
+      border-radius: 100px;
+      color: $color-white;
+      display: flex;
+      gap: 2rem;
+      height: 5rem;
+      justify-content: space-between;
+      padding-inline: 2rem;
+      width: 100%;
+
+      input {
+        background: none;
+        color: inherit;
+        border: none;
+        flex: 2;
+      }
+
+      ::placeholder {
+        color: $color-white;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__nav {
+    background-color: rgba($color-dark-1, 0.9);
+    font-size: 2.4rem;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    padding: 7vh 2rem;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+    width: calc(100% - 4rem);
+    visibility: hidden;
+
+    &.menu-open {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+
+    @include mq($bp-laptop) {
+      background: none;
+      font-size: 1.8rem;
+      height: auto;
+      opacity: 1;
+      padding: initial;
+      position: static;
+      transform: translateY(0);
+      visibility: visible;
+      width: auto;
+    }
+
+    ul {
+      display: grid;
+      gap: 4rem;
+
+      @include mq($bp-laptop) {
+        display: flex;
+        gap: 3vw;
+      }
+    }
+  }
+
+  &__close {
+    display: flex;
+    font-size: 3rem;
+    line-height: 1;
+    right: 5%;
+    position: absolute;
+    top: 3rem;
+
+    @include mq($bp-laptop) {
+      display: none;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .current-menu-item a {
+    border-bottom: 3px solid $color-secondary;
+  }
+}

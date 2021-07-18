@@ -1,0 +1,25 @@
+.page {
+  min-height: 100vh;
+
+  &__wrapper {
+    @include mq($bp-laptop) {
+      margin-left: auto;
+      position: relative;
+      width: calc(100vw - 30rem);
+    }
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: $container;
+  padding-inline: 5%;
+
+  @include mq($bp-laptop) {
+    padding-inline: 2%;
+  }
+
+  &--narrow {
+    max-width: 100rem;
+  }
+}

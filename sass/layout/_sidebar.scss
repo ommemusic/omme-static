@@ -1,0 +1,79 @@
+.sidebar {
+  display: none;
+
+  @include mq($bp-laptop) {
+    background: linear-gradient($color-dark-2, transparent);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 8rem);
+    max-height: calc(100vh - 8rem);
+    overflow-y: scroll;
+    padding-block: 4rem;
+    position: fixed;
+    top: 0;
+    width: 30rem;
+
+    &__logo {
+      display: flex;
+      height: 81.16px;
+      margin: 0 auto 1.5rem;
+      width: 20rem;
+
+      img {
+        display: flex;
+      }
+    }
+
+    &__label {
+      background-color: $color-secondary;
+      color: $color-white;
+      font-family: $font-special;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-inline: 2rem;
+      padding-block: 3px;
+      text-align: center;
+    }
+
+    &__menu {
+      margin-top: 6rem;
+
+      .current-menu-item a {
+        background: linear-gradient(
+          to right,
+          rgba($color-white, 0.05),
+          transparent
+        );
+        border-color: $color-primary;
+        font-weight: bold;
+      }
+
+      a {
+        border-left: 5px solid transparent;
+        color: rgba($color-white, 0.75);
+        display: flex;
+        padding: 1rem 5rem 1rem calc(5rem - 5px);
+        font-weight: normal;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+
+    &__title {
+      font-family: $font-special;
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-left: 5rem;
+    }
+
+    &__social {
+      margin-top: auto;
+      margin-left: 5rem;
+    }
+  }
+}

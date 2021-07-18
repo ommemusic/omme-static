@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servizi preferiti - OMME Music</title>
+
+    <link rel="icon" href="images/logo/logo-mobile.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/gqf2mvb.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page page--favorites">
+    <div class="container container--narrow">
+      <div class="favorites__empty">
+        <p class="favorites__disclaimer">
+          La lista dei tuoi servizi <span>preferiti</span> è vuota.<br />
+          Scopri gli <span>artisti</span> e i <span>servizi</span> e aggiungili
+          alla lista.<br />
+          Una volta completata, inviala tramite l’apposito
+          <span>modulo</span>.<br />
+          Ti ricontatteremo per fissare un appuntamento<br />
+          in una delle nostre sedi.
+        </p>
+
+        <a href="services.html" class="btn btn--secondary">Cominciamo!</a>
+      </div>
+      <h2>Avete scelto i seguenti <span>servizi</span>:</h2>
+      <div class="favorites">
+        <ul class="favorites__list">
+          <li>
+            <article class="favorite">
+              <figure class="favorite__thumb">
+                <img src="images/services/piano.jpg" alt="Piano" />
+              </figure>
+
+              <div class="favorite__content">
+                <h3 class="favorite__title">Piano</h3>
+                <div class="favorite__category">Musica per cerimonia</div>
+              </div>
+
+              <button class="favorite__delete">
+                <i class="ri-close-line"></i>
+              </button>
+            </article>
+          </li>
+
+          <li>
+            <article class="favorite">
+              <figure class="favorite__thumb">
+                <img src="images/services/piano.jpg" alt="Piano" />
+              </figure>
+
+              <div class="favorite__content">
+                <h3 class="favorite__title">Piano</h3>
+                <div class="favorite__category">Musica per cerimonia</div>
+              </div>
+
+              <button class="favorite__delete">
+                <i class="ri-close-line"></i>
+              </button>
+            </article>
+          </li>
+
+          <li>
+            <article class="favorite">
+              <figure class="favorite__thumb">
+                <img src="images/services/piano.jpg" alt="Piano" />
+              </figure>
+
+              <div class="favorite__content">
+                <h3 class="favorite__title">Piano</h3>
+                <div class="favorite__category">Musica per cerimonia</div>
+              </div>
+
+              <button class="favorite__delete">
+                <i class="ri-close-line"></i>
+              </button>
+            </article>
+          </li>
+        </ul>
+
+        <footer class="favorites__footer">
+          <a
+            href="services.html"
+            class="favorites__btn favorites__btn--primary"
+          >
+            <i class="ri-arrow-left-line"></i> Torna ai servizi</a
+          >
+
+          <button class="favorites__btn favorites__btn--secondary">
+            Svuota la lista <i class="ri-delete-bin-7-fill"></i>
+          </button>
+        </footer>
+      </div>
+
+      <h2>Inviateci la vostra <span>lista</span>:</h2>
+
+      <form class="form">
+        <div class="form__row form__row--2cols">
+          <div class="form__item">
+            <label class="form__label" for="first-groom">
+              Sposo/a <span>*</span>
+            </label>
+            <input class="form__input" type="text" id="first-groom" required />
+          </div>
+
+          <div class="form__item">
+            <label class="form__label" for="last-groom">
+              Sposo/a <span>*</span>
+            </label>
+            <input class="form__input" type="text" id="last-groom" required />
+          </div>
+        </div>
+
+        <div class="form__row form__row--2cols">
+          <div class="form__item">
+            <label class="form__label" for="email">
+              Email <span>*</span>
+            </label>
+            <input class="form__input" type="email" id="email" required />
+          </div>
+
+          <div class="form__item">
+            <label class="form__label" for="phone">
+              Telefono <span>*</span>
+            </label>
+            <input class="form__input" type="tel" id="phone" required />
+          </div>
+        </div>
+
+        <div class="form__row form__row--2cols">
+          <div class="form__item">
+            <label class="form__label" for="wedding-date"
+              >Quando vi sposate?</label
+            >
+            <input class="form__input" type="date" id="wedding-date" />
+          </div>
+
+          <div class="form__item">
+            <label class="form__label" for="ceremony-type"
+              >Tipo di cerimonia <span>*</span></label
+            >
+            <input
+              class="form__input"
+              type="text"
+              id="ceremony-type"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__item">
+            <label class="form__label" for="ceremony-location"
+              >Location cerimonia <span>*</span></label
+            >
+            <input
+              class="form__input"
+              type="text"
+              id="ceremony-location"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__item">
+            <label class="form__label" for="party-location"
+              >Location ricevimento <span>*</span></label
+            >
+            <input
+              class="form__input"
+              type="text"
+              id="party-location"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__item">
+            <label class="form__label" for="message">Messaggio</label>
+            <textarea class="form__input" id="message"></textarea>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__item">
+            <label class="form__label" for="privacy">
+              Privacy Policy <span>*</span>
+            </label>
+            <div class="form__check">
+              <input type="checkbox" id="privacy" required />
+              <span>
+                Ho letto e accetto i termini e le condizioni stabiliti
+                <a href="page.html" target="_blank" rel="nofollow">
+                  nell'informativa
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary">
+          Invia la lista <i class="ri-send-plane-fill"></i>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
