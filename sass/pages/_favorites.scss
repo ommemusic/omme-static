@@ -150,3 +150,35 @@
     }
   }
 }
+
+.instructions {
+  counter-reset: countdown;
+  display: grid;
+  gap: 2rem;
+  list-style: none;
+
+  li {
+    align-items: center;
+    counter-increment: countdown;
+    gap: 1rem;
+    display: inline-flex;
+
+    &::before {
+      align-items: center;
+      background-color: $color-secondary;
+      border-radius: 100%;
+      color: $color-white;
+      content: counter(countdown);
+      display: flex;
+      font-weight: bold;
+      height: 2.4rem;
+      justify-content: center;
+      line-height: 1;
+      width: 2.4rem;
+    }
+  }
+
+  strong {
+    font-weight: 900;
+  }
+}

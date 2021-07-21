@@ -1,0 +1,123 @@
+.artist {
+  border-radius: 5px;
+  box-shadow: 0 3px 1rem rgba($color-black, 0.16);
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    bottom: -3rem;
+    content: attr(data-rank);
+    font-size: 41rem;
+    font-weight: 900;
+    line-height: 1;
+    right: 0;
+    opacity: 0.1;
+    position: absolute;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__thumb {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &::after {
+      content: "";
+      background: linear-gradient(transparent, rgba($color-dark-1, 0.75));
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__exclusive {
+    background: $color-white url(../images/logo/logo-mobile.svg) no-repeat
+      center;
+    background-size: cover;
+    border: 2px solid $color-white;
+    border-radius: 100%;
+    box-shadow: 0 3px 6px rgba($color-black, 0.16);
+    color: transparent;
+    font-size: 0;
+    height: calc(5rem - 4px);
+    left: 2rem;
+    line-height: 0;
+    position: absolute;
+    top: 2rem;
+    width: calc(5rem - 4px);
+  }
+
+  &__top {
+    align-items: center;
+    background-color: $color-secondary;
+    border-radius: 0 3px 0 3px;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-special;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+
+    span {
+      font-family: $font-main;
+      font-size: 4.8rem;
+      font-weight: 900;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    border: 1px solid $color-white;
+    border-radius: 100%;
+    display: flex;
+    font-size: 2.4rem;
+    height: 7rem;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7rem;
+  }
+
+  &__new {
+    background-color: $color-secondary;
+    font-family: $font-special;
+    font-size: 2.4rem;
+    line-height: 1;
+    padding: 0.3rem 1.5rem;
+    position: absolute;
+    bottom: 2rem;
+    left: -1rem;
+  }
+}

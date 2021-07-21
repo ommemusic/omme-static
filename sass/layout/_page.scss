@@ -8,6 +8,14 @@
       width: calc(100vw - 30rem);
     }
   }
+
+  &__content {
+    padding-block: 4rem;
+
+    @include mq($bp-laptop) {
+      padding-block: 10rem;
+    }
+  }
 }
 
 .container {

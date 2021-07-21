@@ -1,0 +1,74 @@
+.video {
+  border-radius: 5px;
+  box-shadow: 0 3px 1rem rgba($color-black, 0.16);
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    bottom: -3rem;
+    content: attr(data-rank);
+    font-size: 41rem;
+    font-weight: 900;
+    line-height: 1;
+    right: 0;
+    opacity: 0.1;
+    position: absolute;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__thumb {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &::after {
+      content: "";
+      background: linear-gradient(transparent, rgba($color-dark-1, 0.75));
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: 0.3s;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    border: 1px solid $color-white;
+    border-radius: 100%;
+    display: flex;
+    font-size: 2.4rem;
+    height: 5rem;
+    justify-content: center;
+    right: 2rem;
+    position: absolute;
+    bottom: 2rem;
+    width: 5rem;
+  }
+}

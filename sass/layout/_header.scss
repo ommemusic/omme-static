@@ -1,0 +1,64 @@
+.header {
+  background: linear-gradient(rgba($color-dark-1, 0.7), rgba($color-dark-1, 1)),
+    url(../images/bg-contatti.jpg) no-repeat center;
+  background-size: cover;
+  padding: 2rem;
+
+  @include mq($bp-laptop) {
+    align-items: center;
+    display: flex;
+    min-height: 35vh;
+    position: relative;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--cols {
+    text-align: center;
+
+    @include mq($bp-laptop) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-inline: 5%;
+      padding-top: 10vh;
+      text-align: left;
+    }
+
+    @include mq($bp-desktop) {
+      .header__title,
+      .header__subtitle,
+      .header__paragraph {
+        width: 40%;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-family: $font-special;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: $color-white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    display: none;
+
+    @include mq($bp-laptop) {
+      display: flex;
+      font-size: 2rem;
+    }
+  }
+
+  .btn-play {
+    top: 50%;
+    right: 20%;
+  }
+}

@@ -14,6 +14,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="home">
@@ -31,6 +36,10 @@
     </header>
     <main>
       <section class="section hero">
+        <video autoplay muted loop class="hero__video">
+          <source src="video/gala-small.mp4" type="video/mp4" />
+        </video>
+
         <img
           src="images/logo/logo.svg"
           alt="OMME Music
@@ -109,16 +118,430 @@
         </section>
       </div>
 
+      <section class="home-top section">
+        <h2 class="section__heading">Artisti top della settimana</h2>
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-top">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Alex Pezzotti -->
+            <div class="swiper-slide">
+              <div class="artist" data-rank="1">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/alex.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Duo Francesco e Alessandro -->
+            <div class="swiper-slide">
+              <div class="artist" data-rank="2">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+
+                  <div class="artist__new">New Entry</div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img
+                    src="images/services/artists/duo-francesco-alessandro.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Giulia -->
+            <div class="swiper-slide">
+              <div class="artist" data-rank="3">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/giulia.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Michela -->
+            <div class="swiper-slide">
+              <div class="artist" data-rank="4">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/michela.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Tania -->
+            <div class="swiper-slide">
+              <div class="artist" data-rank="5">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/tania.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section class="home-lombardia section">
+        <div class="section__top">
+          <h2 class="section__heading">I nostri artisti - Lombardia</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-lombardia">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Alex Pezzotti -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/alex.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Duo Francesco e Alessandro -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+
+                  <div class="artist__new">New Entry</div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img
+                    src="images/services/artists/duo-francesco-alessandro.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Giulia -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/giulia.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Michela -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/michela.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Tania -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/tania.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section class="home-veneto section">
+        <div class="section__top">
+          <h2 class="section__heading">I nostri artisti - Veneto</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-veneto">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Alex Pezzotti -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/alex.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Duo Francesco e Alessandro -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+
+                  <div class="artist__new">New Entry</div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img
+                    src="images/services/artists/duo-francesco-alessandro.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Giulia -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/giulia.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Michela -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/michela.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Tania -->
+            <div class="swiper-slide">
+              <div class="artist">
+                <a href="#" class="artist__link">
+                  <div class="artist__exclusive">Esclusiva OMME Music</div>
+
+                  <div class="artist__top">Top <span>10</span></div>
+
+                  <div class="artist__icon">
+                    <i class="ri-play-fill"></i>
+                  </div>
+                </a>
+
+                <figure class="artist__thumb">
+                  <img src="images/services/artists/tania.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section class="home-services section">
+        <div class="section__top">
+          <h2 class="section__heading">Servizi extra</h2>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-extra">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Animatrice bambini -->
+            <div class="swiper-slide">
+              <div class="service">
+                <a href="#" class="service__link">
+                  <div class="service__info">
+                    <h3 class="service__title">Animatrice bambini</h3>
+                    <div class="service__category">Animazione bambini</div>
+                  </div>
+                </a>
+
+                <figure class="service__thumb">
+                  <img src="images/bg-animazione.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Photobooth e Polaroid -->
+            <div class="swiper-slide">
+              <div class="service">
+                <a href="#" class="service__link">
+                  <div class="service__info">
+                    <h3 class="service__title">Photobooth e Polaroid</h3>
+                    <div class="service__category">
+                      Giochi e intrattenimento
+                    </div>
+                  </div>
+                </a>
+
+                <figure class="service__thumb">
+                  <img src="images/bg-photobooth.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Allestimento Palloncini -->
+            <div class="swiper-slide">
+              <div class="service">
+                <a href="#" class="service__link">
+                  <div class="service__new">Novità</div>
+                  <div class="service__info">
+                    <h3 class="service__title">Allestimento Palloncini</h3>
+                    <div class="service__category">
+                      Scenografia ed effetti speciali
+                    </div>
+                  </div>
+                </a>
+
+                <figure class="service__thumb">
+                  <img src="images/bg-allestimenti.jpeg" alt="" />
+                </figure>
+              </div>
+            </div>
+
+            <!-- Fontane a freddo -->
+            <div class="swiper-slide">
+              <div class="service">
+                <a href="#" class="service__link">
+                  <div class="service__info">
+                    <h3 class="service__title">Fontane a freddo</h3>
+                    <div class="service__category">
+                      Scenografia ed effetti speciali
+                    </div>
+                  </div>
+                </a>
+
+                <figure class="service__thumb">
+                  <img src="images/bg-allestimenti.jpeg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
       <div class="home-instagram">
         <h2>Instagram <span>@ommemusic</span></h2>
 
-        <div>INSTAGRAM FEED HERE</div>
+        <div style="text-align: center">
+          <img src="images/ig-placeholder.png" alt="" />
+        </div>
       </div>
 
       <div class="home-matrimonio">
         <h2>OMME Music su <span>Matrimonio.com</span></h2>
 
-        <div>MATRIMONIO.COM FEED HERE</div>
+        <div style="text-align: center">
+          <img src="images/matr-placeholder.png" alt="" />
+        </div>
 
         <div class="matrimonio-badges">
           <img src="images/badges/badge-weddingawards_it_IT.jpg" />
@@ -310,5 +733,9 @@
         </li>
       </ul>
     </nav>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

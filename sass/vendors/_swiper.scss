@@ -1,0 +1,62 @@
+:root {
+  --swiper-theme-color: white;
+  --swiper-navigation-size: 18px;
+}
+
+.swiper-container {
+  width: 90vw;
+  height: 22rem;
+  padding-bottom: 50px;
+}
+
+.swiper-extra {
+  width: 90vw;
+  height: 22rem;
+  padding-bottom: 50px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  height: 0.3rem;
+  width: 2rem;
+}
+
+@media (min-width: 769px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .swiper-container {
+    height: 63rem;
+  }
+
+  .swiper-extra,
+  .swiper-cerimonia,
+  .swiper-ricevimento,
+  .swiper-animazione,
+  .swiper-intrattenimento,
+  .swiper-effetti {
+    height: 39rem;
+  }
+
+  .swiper-artists {
+    height: 55rem;
+  }
+
+  .swiper-pairings,
+  .swiper-video {
+    height: 33rem;
+  }
+
+  .swiper-foto {
+    height: 30rem;
+  }
+}

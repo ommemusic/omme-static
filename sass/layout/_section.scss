@@ -1,0 +1,59 @@
+.section {
+  padding-block: 3rem;
+  padding-inline: 2rem;
+
+  @include mq($bp-laptop) {
+    padding-block: 5rem;
+    padding-inline: 5%;
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @include mq($bp-laptop) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__heading {
+    border-left: 3px solid $color-secondary;
+    color: $color-white;
+    font-family: $font-special;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-left: 0.8rem;
+
+    @include mq($bp-laptop) {
+      border-width: 4px;
+      font-size: 3.6rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 7rem 1.6rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .service {
+      height: 16vh;
+
+      @include mq($bp-laptop) {
+        height: 38vh;
+      }
+    }
+  }
+
+  &--pairings {
+    .section {
+      &__cta {
+        margin-top: 3rem;
+        text-align: center;
+      }
+    }
+  }
+}

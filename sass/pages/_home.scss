@@ -17,6 +17,10 @@
     text-align: center;
     width: 90%;
 
+    &__video {
+      display: none;
+    }
+
     &__logo {
       margin: 0 auto 6rem;
       width: 20rem;
@@ -92,6 +96,7 @@
       padding: 2rem 5%;
       position: fixed;
       width: 90%;
+      z-index: 9999;
     }
 
     &-nav {
@@ -104,6 +109,38 @@
 
     .hero {
       text-align: left;
+      position: relative;
+
+      &__video {
+        display: none;
+
+        @include mq($bp-laptop) {
+          display: flex;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
+
+      @include mq($bp-laptop) {
+        &::after {
+          background: linear-gradient(rgba($color-dark-1, 0.7), $color-dark-1);
+          content: "";
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+
+        & > *:not(.hero__video) {
+          position: relative;
+          z-index: 2;
+        }
+      }
 
       &__logo {
         display: none;
@@ -273,8 +310,31 @@
 .home-matrimonio {
   display: none;
   @include mq($bp-laptop) {
+    background: url(../images/bg-ig.jpeg) no-repeat center;
+    background-size: cover;
     display: block;
     padding-block: 10rem;
+    position: relative;
+    z-index: 01;
+
+    &::before {
+      background: linear-gradient(
+        rgba($color-dark-1, 0.95),
+        rgba($color-dark-1, 0.95)
+      );
+      background-blend-mode: saturation;
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
 
     h2 {
       font-family: $font-special;
@@ -302,4 +362,12 @@
 
 .home-sidebar {
   padding-block: 6rem;
+}
+
+.home-top {
+  //display: none;
+
+  @include mq($bp-laptop) {
+    display: block;
+  }
 }

@@ -1,0 +1,79 @@
+.audio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include mq($bp-laptop) {
+    flex-direction: row;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+}
+
+.player {
+  background-color: $color-dark-2;
+  border-radius: 5px;
+  max-width: 50rem;
+  overflow: hidden;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    line-height: 1;
+    padding: 1rem 2rem 1rem 1rem;
+
+    &::before {
+      content: url(../images/compact-disc.svg);
+      display: flex;
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title {
+    color: $color-white;
+  }
+
+  &__icon {
+    align-items: center;
+    border: 1px solid $color-white;
+    border-radius: 100%;
+    background-color: transparent;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    transition: 0.3s;
+    width: 3rem;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-dark-1;
+    }
+
+    .ri-pause-fill {
+      display: none;
+    }
+  }
+
+  &__slider {
+    background-color: rgba($color-white, 0.1);
+    height: 5px;
+  }
+
+  &__slide {
+    background-color: $color-secondary;
+    height: 100%;
+    width: 80%;
+  }
+}
